@@ -18,7 +18,7 @@ Conveyor Belt Inspection |  |  | ? |
 Curupira |  |  | ? |
 Fragile Diamonds |  |  | ? |
 Gift Box | :+1: |  | 4/7 |
-Punctual Chefs |  |  | 3/7 |
+Punctual Chefs | :+1: |  | 3/7 |
 
 
 Folder structure should be
