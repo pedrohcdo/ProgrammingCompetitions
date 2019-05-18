@@ -31,27 +31,23 @@ public class ProblemA {
                 l = Math.max(l, out);
             }
             
-            // Helper
-            int[] coutHelper = new int[l + 1];
-            coutHelper[0] = mIn[0];
-            for (int i = 1; i < l + 1; ++i)
-                coutHelper[i] = (coutHelper[i-1] + mIn[i]) - mOut[i]; 
-
             ///
             int time = 0;
             int max = 0;
+            int helper = 0;
             for (int i = 0; i < l + 1; ++i) {
+                helper += mIn[i] - mOut[i];
                 if (mIn[i] > 0) {
                     max = Math.max(max, time);
                     time = 0;
                 }
                 if (mOut[i] > 0) {
-                    if (coutHelper[i] <= 0) {
+                    if (helper <= 0) {
                         max = Math.max(max, time);
                         time = 0;
                     }
                 }
-                if (coutHelper[i] > 0) {
+                if (helper > 0) {
                     ++time;
                 }
             }
